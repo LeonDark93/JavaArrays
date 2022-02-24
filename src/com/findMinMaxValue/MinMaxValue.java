@@ -81,5 +81,36 @@ public class MinMaxValue {
           }
        }
     }
+
+    public static void minMaxValueMultiplyArray(int [][] array){
+        Random random = new Random();
+        for(int i = 0; i<array.length; i++){
+            System.out.println("");
+            for(int j = 0; j<array[i].length; j++){
+                array[i][j] = random.nextInt(50);
+                System.out.print(" " + array[i][j]);
+            }
+        }
+        int min = array[0][0];
+        int max = array[0][0];
+
+        for(int i = 0; i<array.length; i++){
+            System.out.println("");
+            for(int j = 0; j<array[i].length; j++){
+                if(array[i][j] < min){
+                    min = array[i][j];
+                }
+                if(array[i][j] > max){
+                    max = array[i][j];
+
+                }
+            }
+        }
+
+        System.out.println("min = " + min);
+        System.out.println("max = " + max);
+
+    }
+
 }
 
